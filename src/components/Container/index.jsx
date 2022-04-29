@@ -1,8 +1,11 @@
 import { StyledContainer } from "./style";
 
-const Container = ({ children }) => {
+const Container = ({ children, ...rest }) => {
+
+  const { centered } = rest;
+
   return(
-    <StyledContainer>
+    <StyledContainer centered={centered} >
       { children }
     </StyledContainer>
   )

@@ -1,22 +1,14 @@
-import Button from "../../components/Button";
-import { SolidSmallButton } from "../../components/Button/styles";
-import Header from "../../components/Header";
+// import Button from "../../components/Button";
+// import { SolidSmallButton } from "../../components/Button/styles";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer";
 import Main from "../../components/Main";
-import { StyledImage, StyledMenu, StyledSection } from "./styles";
+import { StyledImage, StyledSection } from "./styles";
 
 const UserProfile = () => {
   return (
     <>
-      <Header>
-        <StyledMenu>
-          <Button>Início</Button>
-          <Button>O que é selo verde?</Button>
-          <Button>Pontuação</Button>
-          <Button>Meus vouchers</Button>
-          <Button>Empresas parceiras</Button>
-        </StyledMenu>
-        <SolidSmallButton>Sair</SolidSmallButton>
-      </Header>
+      <Header />
       <Main>
         <StyledSection>
           <h3>Produto Amigo</h3>
@@ -49,6 +41,7 @@ const UserProfile = () => {
           </figure>
         </StyledSection>
       </Main>
+      <Footer />
     </>
   );
 };

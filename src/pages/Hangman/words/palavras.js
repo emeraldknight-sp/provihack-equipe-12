@@ -1,0 +1,15 @@
+export const palavras = [
+    { id: 1, palavra: 'primeira', significa: 'primeira palavra' },
+    { id: 2, palavra: 'segunda', significa: '2 palavra' },
+    { id: 3, palavra: 'terceira', significa: '3 palavra' },
+    { id: 4, palavra: 'quarta', significa: '4 palavra' },
+    { id: 5, palavra: 'quinta', significa: '5 palavra' },
+    { id: 6, palavra: 'sexta', significa: '6 palavra' },
+    { id: 7, palavra: 'setima', significa: '7 palavra' },
+    { id: 8, palavra: 'oitava', significa: '8 palavra' },
+    { id: 9, palavra: 'nona', significa: '9 palavra' },
+    { id: 10, palavra: 'decima', significa: '10 palavra' },
+    { id: 11, palavra: 'decimaprimeira', significa: '11 palavra' },
+    { id: 12, palavra: 'decimasegunda', significa: '12 palavra' },
+    { id: 13, palavra: 'decimaterceira', significa: '13 palavra' },
+]

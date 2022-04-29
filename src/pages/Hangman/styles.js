@@ -1,54 +1,74 @@
 import styled from "styled-components";
 
-export const StyledMenu = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 10px;
-  z-index: 1;
-  cursor: pointer;
+
+export const HangmanDiv = styled.div`
+  height:80vh;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
 `
 
-export const StyledImage = styled.img`
-  width: 400px;
-  height: 200px;
-  border: none;
-  border-radius: 5px;
+export const Title = styled.div`
+  font-size: 36px;
+  margin-bottom:52px;
 `
 
-export const StyledSection = styled.section`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 300px 0 1;
-    gap: 20px;
-    transition: transform 0.2s;
-    height: 420px;
+export const GameDiv = styled.div`
+  display:flex;
+  width:100%;
+`
 
-    h3 {
-      width: 100%;
-      font-size: var(--fontsize-h3);
-      padding: 20px;
-      border: 2px solid;
-      border-radius: 35px;
-    }
+export const LeftDiv = styled.div`
+  width:50%;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
 
-    p {
-      height: 100px;
-      margin-bottom: 20px;
-    }
+  h1{
+    font-size:20px;
+    margin-bottom:16px;
+  }
+`
 
-    figure {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-    }
+export const RightDiv = styled.div`
+  width:50%;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+`
 
-    &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+export const WordDiv = styled.div`
+  display:flex;
+`
+
+export const AttemptsDiv = styled.div`
+  display:flex;
+  height:20px;
+  margin-top:16px;
+
+  span{
+  margin-left:6px;
+  }
+`
+
+export const Letter = styled.div`
+  cursor:text;
+  height:20px;
+  width:20px;
+  border:1px solid black;
+  border-radius:4px;
+  margin:1px;
+  display:flex;
+  justify-content:center;
+  `
+export const InputDiv = styled.div`
+  display:flex;
+  margin-top:16px;
+  
+  input{
+    width:16px;
+    margin:0 8px;
+    text-align:center;
   }
 `

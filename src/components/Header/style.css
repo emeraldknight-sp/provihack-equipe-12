@@ -1,9 +1,10 @@
 .headerBackground {
   display: flex;
   height: 238px;
-  width: 100vw;
+  width: 100%;
+  padding: 0;
 
-  background-image: URL("../../assets/cabecalho.svg");
+  background-image: URL("../../assets/img/header.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }

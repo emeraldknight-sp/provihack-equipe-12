@@ -77,8 +77,8 @@ select {
   --fontfamily-decorative: "Playfair Display", serif;
 
   --fontsize-h1: 2rem;
-  --fontsize-h2: (calc(--fontsize-h1 - 25%));
-  --fontsize-h3: (calc(--fontsize-h2 - 25%));
+  --fontsize-h2: calc(var(--fontsize-h1) - 25%);
+  --fontsize-h3: calc(var(--fontsize-h2) - 25%);
   --headline: 0.75rem;
   --body: 1rem;
 }

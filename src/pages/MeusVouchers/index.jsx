@@ -21,7 +21,7 @@ function MeusVouchers() {
             <div className="voucher">
               <img src={VoucherIcon} alt="Icon" />
               <p>%&*$#</p>
-              <button>Copiar voucher</button>
+              <button className="btnCopy">Copiar voucher</button>
             </div>
             <div className="horizontalLine"></div>
           </div>

@@ -1,6 +1,6 @@
 import { Switch, Route } from "react-router-dom";
 // import UserProfile from "../pages/UserProfile";
-import MeusVouchers from "../pages/MeusVouchers";
+import Pontuação from "../pages/Pontuacao";
 
 const Routes = () => {
   return (
@@ -9,7 +9,7 @@ const Routes = () => {
       <Route exact path="/login"></Route>
       <Route exact path="/profile">
         {/* <UserProfile /> */}
-        <MeusVouchers />
+        <Pontuação />
       </Route>
     </Switch>
   );

@@ -4,7 +4,7 @@ import { StyledMain } from "./style";
 const Main = ({ children }) => {
   return(
     <StyledMain>
-      <Container>
+      <Container centered>
         { children }
       </Container>
     </StyledMain>

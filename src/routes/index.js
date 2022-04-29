@@ -1,20 +1,18 @@
 import { Switch, Route } from "react-router-dom";
-import UserProfile from "../pages/UserProfile";
+// import UserProfile from "../pages/UserProfile";
+import EmpresasParceiras from "../pages/EmpresasParceiras";
 
 const Routes = () => {
-  return(
+  return (
     <Switch>
-      <Route exact path="/">
-        
-      </Route>
-      <Route exact path="/login">
-
-      </Route>
+      <Route exact path="/"></Route>
+      <Route exact path="/login"></Route>
       <Route exact path="/profile">
-        <UserProfile />
+        {/* <UserProfile /> */}
+        <EmpresasParceiras />
       </Route>
     </Switch>
-  )
-}
+  );
+};
 
 export default Routes;

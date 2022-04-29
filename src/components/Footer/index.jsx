@@ -1,15 +1,7 @@
-import Container from "../Container";
-import { StyledFooter } from "./styles";
+import "./style.css";
 
-
-const Footer = () => {
-  return(
-    <StyledFooter>
-      <Container>
-
-      </Container>
-    </StyledFooter>
-  )
+function Footer() {
+  return <footer className="footer"></footer>;
 }
 
 export default Footer;

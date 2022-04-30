@@ -105,7 +105,10 @@ const Hangman = () => {
             {letras !== "" &&
               <h1>{`Dica: ${letras.significado}`}</h1>
             }
-            <Lifes lifes={lifes} />
+            <Lifes
+              lifes={lifes}
+              defaultValue={5}
+            />
             <AttemptsDiv>
               <p>Letras tentadas: </p>
               {

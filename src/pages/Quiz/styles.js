@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const HangmanDiv = styled.div`
+export const QuizDiv = styled.div`
 
   display:flex;
   flex-direction: column;
@@ -43,8 +43,6 @@ export const LeftDiv = styled.div`
   align-items:center;
 
   h1{
-    width:70%;
-    padding:20px;
     font-size:20px;
     margin-bottom:16px;
   }
@@ -61,18 +59,7 @@ export const WordDiv = styled.div`
   display:flex;
 `
 
-export const AttemptsDiv = styled.div`
-  display:flex;
-  height:20px;
-  margin-top:16px;
-
-
-  span{
-  margin-left:6px;
-}
-`
-
-export const Letter = styled.div`
+export const Option = styled.div`
   cursor:text;
 
   border:1px solid black;

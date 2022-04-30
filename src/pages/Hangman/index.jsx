@@ -4,6 +4,9 @@ import Footer from "../../components/Footer";
 import Lifes from '../../components/Lifes';
 import { AttemptsDiv, GameDiv, HangmanDiv, InputDiv, LeftDiv, Letter, RightDiv, Title, WordDiv } from "./styles";
 import { palavras } from './words/palavras';
+import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
+
 
 const Hangman = () => {
   const [letras, setLetras] = useState("");
@@ -12,6 +15,8 @@ const Hangman = () => {
   const [letrasTentadas, setLetrasTentadas] = useState([]);
   const [lifes, setLifes] = useState(5);
   const [reiniciar, setReiniciar] = useState(false);
+  const navigate = useNavigate();
+
 
   function definirPalavra() {
     const posicao = Math.floor((Math.random() * palavras.length));
@@ -98,7 +103,9 @@ const Hangman = () => {
             </b>
             Clique no botão iniciar para começar o jogo e utilize o espaço para digitar a letra desejada e aperte o botão para confirmar sua escolha. Aproveite a dica ao lado para aumentar seu conhecimento sobre assuntos ligados a preservação ambiental. Tome cuidado para não perder todas as suas vidas. Não é utilizado acentos ou "ç" e não tem diferença entra letras maiúsculas ou minúsculas.
           </p>
-
+          <Button sx={{ mt: 1, mr: 1 }} type="submit" onClick={() => navigate('/games')} variant="outlined">
+            Escolher outro jogo
+          </Button>
         </Title>
         <GameDiv>
           <LeftDiv>
@@ -110,10 +117,12 @@ const Hangman = () => {
               defaultValue={5}
             />
             <AttemptsDiv>
-              <p>Letras tentadas: </p>
-              {
-                letrasTentadas.map((letra) => <span key={letra}>{letra}</span>)
-              }
+              <p>Letras tentadas:
+
+                {
+                  letrasTentadas.map((letra) => <span key={letra}>{letra}</span>)
+                }
+              </p>
             </AttemptsDiv>
           </LeftDiv>
           <RightDiv>
@@ -129,15 +138,21 @@ const Hangman = () => {
               }
             </WordDiv>
             {letras === "" &&
-              <button onClick={definirPalavra}>Iniciar</button>
+              <Button sx={{ mt: 1, mr: 1 }} type="submit" onClick={definirPalavra} variant="outlined" >
+                Iniciar
+              </Button>
             }
             {reiniciar &&
-              <button onClick={definirPalavra}>Jogar Novamente</button>
+              <Button sx={{ mt: 1, mr: 1 }} type="submit" onClick={definirPalavra} variant="outlined" >
+                Jogar Novamente
+              </Button>
             }
             {(letras !== "" && !reiniciar) && <InputDiv>
               <label>Digite aqui sua tentativa:</label>
               <input type="text" maxLength={1} value={tentativa} onChange={handleTentativa} />
-              <button onClick={submeterTentativa}>Tentar</button>
+              <Button sx={{ mt: 1, mr: 1 }} type="submit" onClick={submeterTentativa} variant="outlined" >
+                Tentar letra
+              </Button>
             </InputDiv>
             }
           </RightDiv>

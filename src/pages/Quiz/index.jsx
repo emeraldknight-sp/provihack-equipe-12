@@ -1,52 +1,34 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Lifes from '../../components/Lifes';
-import ErrorRadios from '../../components/FormRadioButton';
-import { GameDiv, QuizDiv, InputDiv, LeftDiv, RightDiv, Title, WordDiv } from "./styles";
-import { questions } from './questions/questions';
+import Lifes from "../../components/Lifes";
+import ErrorRadios from "../../components/FormRadioButton";
+import { GameDiv, QuizDiv, LeftDiv, RightDiv, Title, WordDiv } from "./styles";
+import { questions } from "./questions/questions";
+import Button from "@mui/material/Button";
 
 const Quiz = () => {
   const [pergunta, setPergunta] = useState("");
-  const [tentativa, setTentativa] = useState("");
   const [lifes, setLifes] = useState(3);
+  const [acertos, setAcertos] = useState(0);
   const [reiniciar, setReiniciar] = useState(false);
+  const navigate = useNavigate();
 
-  function definirPalavra() {
+  function definirPergunta() {
     const posicao = Math.floor((Math.random() * questions.length));
     const perguntaSelecionada = questions[posicao];
     setPergunta(perguntaSelecionada);
-    setLifes(3)
-    setReiniciar(false)
+    setLifes(3);
+    setAcertos(0);
+    setReiniciar(false);
   }
 
-  async function submeterResposta(e) {
-    e.preventDefault()
-    if (tentativa === "") {
-      return
-    }
-    const localLetras = pergunta;
-    const temALetra = localLetras.letras.some((letra) => letra.letra === tentativa.toLowerCase());
-    if (temALetra) {
-      localLetras.letras.filter((letra) => {
-        if (letra.letra === tentativa.toLowerCase()) {
-          return letra.encontrada = true
-        } else {
-          return letra
-        }
-      })
-      const finalizado = localLetras.letras.every((letra) => letra.encontrada === true);
-      if (finalizado) {
-        setReiniciar(true)
-        alert("Parabens você venceu!!!")
-      }
-    } else {
-      setLifes(lifes - 1)
-    }
-
-    setTentativa("")
+  function definirProximaPergunta() {
+    const posicao = Math.floor((Math.random() * questions.length));
+    const perguntaSelecionada = questions[posicao];
+    setPergunta(perguntaSelecionada);
   }
-
 
   useEffect(() => {
     if (lifes === 0) {
@@ -54,7 +36,11 @@ const Quiz = () => {
       setReiniciar(true)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lifes])
+  }, [lifes]);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pergunta])
 
   return (
     <>
@@ -70,7 +56,9 @@ const Quiz = () => {
             </b>
             Clique no botão iniciar para começar o jogo e teste seus conhecimentos sobre reciclagem e energia renovavel. Tome cuidado, só é permitido errar 2 vezes.
           </p>
-
+          <Button sx={{ mt: 1, mr: 1 }} type="submit" onClick={() => navigate('/games')} variant="outlined">
+            Escolher outro jogo
+          </Button>
         </Title>
         <GameDiv>
           <LeftDiv>
@@ -81,23 +69,33 @@ const Quiz = () => {
               lifes={lifes}
               defaultValue={3}
             />
+            <p>{`Acertos consecutivos: ${acertos}`}</p>
           </LeftDiv>
           <RightDiv>
             <WordDiv>
               {(pergunta !== "" && !reiniciar) &&
-                <ErrorRadios alternativas={pergunta.alternativas} />
+                <ErrorRadios alternativas={pergunta.alternativas}
+                  lifes={lifes}
+                  setLifes={setLifes}
+                  definirProximaPergunta={definirProximaPergunta}
+                  acertos={acertos}
+                  setAcertos={setAcertos}
+                />
               }
             </WordDiv>
             {pergunta === "" &&
-              <button onClick={definirPalavra}>Iniciar</button>
+              // <button onClick={definirPergunta
+              // }>Iniciar</button>
+              <Button sx={{ mt: 1, mr: 1 }} type="submit" onClick={definirPergunta} variant="outlined">
+                Iniciar
+              </Button>
             }
             {reiniciar &&
-              <button onClick={definirPalavra}>Jogar Novamente</button>
-            }
-            {(pergunta !== "" && !reiniciar) && <InputDiv>
-
-              <button onClick={submeterResposta}>Tentar</button>
-            </InputDiv>
+              <Button sx={{ mt: 1, mr: 1 }} type="submit" onClick={definirPergunta} variant="outlined">
+                Jogar Novamente
+              </Button>
+              // <button onClick={definirPergunta
+              // }>Jogar Novamente</button>
             }
           </RightDiv>
         </GameDiv>

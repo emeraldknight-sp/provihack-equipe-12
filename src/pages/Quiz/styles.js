@@ -28,6 +28,7 @@ export const Title = styled.div`
       margin-right: 6px;
     }
   font-size:1rem;
+  margin-bottom:24px;
   }
 `
 
@@ -43,8 +44,15 @@ export const LeftDiv = styled.div`
   align-items:center;
 
   h1{
+    text-align:center;
+    width:80%;
     font-size:20px;
-    margin-bottom:16px;
+    margin-bottom:32px;
+  }
+
+  p{
+    font-size:16px;
+    margin-top:32px;
   }
 `
 

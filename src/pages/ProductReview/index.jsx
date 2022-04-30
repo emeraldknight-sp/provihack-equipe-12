@@ -22,7 +22,7 @@ const ProductReview = () => {
           <p>
             Conhecer e escolher consumirs amigos do meio ambiente, que
             carregam o selo com apelo sustentável é estar consciente de que
-            podemos fazer a nossa parte. 
+            podemos fazer a nossa parte.
           </p>
           <p>
             Optando pors com estes selos,

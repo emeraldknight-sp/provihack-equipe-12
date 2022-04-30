@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { Menu, MenuOptionsList, OptionsMenuItem } from "./styles";
-import { GrLogout, GrValidate } from "react-icons/gr";
+import { MdOutlineVerified } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsQuestionCircle } from "react-icons/bs";
 import { CgGames } from "react-icons/cg";
 import { VscActivateBreakpoints } from "react-icons/vsc";
 import { IoIosCard } from "react-icons/io";
-import { FiUsers } from "react-icons/fi";
+import { FiUsers, FiLogOut } from "react-icons/fi";
 
 const SidebarMenu = ({ click, setClick }) => {
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ const SidebarMenu = ({ click, setClick }) => {
           </OptionsMenuItem>
 
           <OptionsMenuItem onClick={() => handleClick("/review")}>
-            <GrValidate color="#ffffff" /> Avaliar
+            <MdOutlineVerified /> Avaliar
           </OptionsMenuItem>
 
           <OptionsMenuItem onClick={() => handleClick("/games")}>
@@ -49,7 +49,7 @@ const SidebarMenu = ({ click, setClick }) => {
           </OptionsMenuItem>
 
           <OptionsMenuItem onClick={() => handleClick("/")}>
-            <GrLogout /> Sair
+            <FiLogOut /> Sair
           </OptionsMenuItem>
         </MenuOptionsList>
       </Menu>

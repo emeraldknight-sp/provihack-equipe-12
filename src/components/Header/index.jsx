@@ -4,7 +4,6 @@ import MenuIcon from "../../assets/img/burguerMenu.svg";
 import CloseIcon from "../../assets/img/close-icon-header/icons8-excluir-64.svg";
 import { useState } from "react";
 import SidebarMenu from "../SidebarMenu";
-import { IoIosClose } from "react-icons/io";
 
 function Header() {
 

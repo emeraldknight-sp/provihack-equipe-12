@@ -69,6 +69,9 @@ select {
   --gray-1: #d5d5d5;
   --gray-0: #ffffff;
 
+  --black: #13191B;
+  --white: #F5F5F5; 
+
   --button: #22B14C;
   --button--negative: #22B14C;
   --border: #22B14C;

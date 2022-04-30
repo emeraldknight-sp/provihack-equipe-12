@@ -2,7 +2,7 @@ import "./style.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-function Pontuacao() {
+function Score() {
   return (
     <div className="pontuacao">
       <Header />
@@ -21,4 +21,4 @@ function Pontuacao() {
   );
 }
 
-export default Pontuacao;
+export default Score;

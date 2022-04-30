@@ -1,16 +1,20 @@
 import Input from "../../components/Input";
 import Button from "../../components/Button";
+
+import { useNavigate } from "react-router-dom";
 import { FiLock, FiMail } from "react-icons/fi";
-import { AnimationContainer, Background, Container, Content } from "./styles";
-// import { Link, Redirect, useHistory } from "react-router-dom";
-import { useForm } from "react-hook-form";
+import { AnimationContainer, Container, Content } from "./styles";
+
 import * as yup from "yup";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+
 import api from "../../services/api";
 import { toast } from "react-toastify";
 
+import LoginImage from "../../assets/img/sidebar-img.svg";
 
-function Login({ authenticated, setAuthenticated }) {
+const Login = ({ authenticated, setAuthenticated }) => {
   const schema = yup.object().shape({
     email: yup.string().email("Email inválido").required("Campo obrigatório!"),
     password: yup
@@ -23,10 +27,11 @@ function Login({ authenticated, setAuthenticated }) {
     register,
     handleSubmit,
     formState: { errors },
+    // eslint-disable-next-line no-unused-vars
     formState,
   } = useForm({ resolver: yupResolver(schema) });
 
-  // const history = useHistory();
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     api
@@ -37,17 +42,14 @@ function Login({ authenticated, setAuthenticated }) {
         localStorage.setItem("@Doit:token", JSON.stringify(accessToken));
         localStorage.setItem("@Doit:user", JSON.stringify(user));
 
-
         setAuthenticated(true);
-
-        
-        // history.push("/dashboard");
+        navigate("/dashboard");
       })
       .catch((err) => toast.error("Email ou senha inválidos"));
   };
 
   if (authenticated) {
-    // return <Redirect to="/dashboard" />;
+    navigate("/dashboard");
   }
 
   return (
@@ -73,14 +75,14 @@ function Login({ authenticated, setAuthenticated }) {
               error={errors.password?.message}
               type="password"
             />
-            <Button type="submit">Enviar</Button>
-            <p>
-              {/* Não tem conta? Faça seu <Link to="/signup">cadastro</Link> */}
-            </p>
+            <Button type="submit" >Entrar</Button>
+            <span> Já tem cadastro? <a href="/signup"> Clique aqui </a></span>
           </form>
         </AnimationContainer>
       </Content>
-      <Background />
+      <figure>
+        <img src={LoginImage} alt="login" />
+      </figure>
     </Container>
   );
 }

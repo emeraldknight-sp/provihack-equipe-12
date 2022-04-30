@@ -1,13 +1,18 @@
 import Input from "../../components/Input";
 import Button from "../../components/Button";
+
+import { useNavigate } from "react-router-dom";
 import { FiLock, FiMail, FiUser } from "react-icons/fi";
-import { AnimationContainer, Background, Container, Content } from "./styles";
-// import { Link, Redirect, useHistory } from "react-router-dom";
+import { AnimationContainer, Container, Content } from "./styles";
+
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+
 import api from "../../services/api";
 import { toast } from "react-toastify";
+
+import RegisterImage from "../../assets/img/sidebar-img.svg";
 
 function Signup({ authenticated }) {
   const schema = yup.object().shape({
@@ -27,17 +32,18 @@ function Signup({ authenticated }) {
       .required("Campo obrigatório"),
   });
 
-  // const history = useHistory();
+  const navigate = useNavigate();
 
   const {
     register,
     handleSubmit,
     formState: { errors },
+    // eslint-disable-next-line no-unused-vars
     formState,
   } = useForm({ resolver: yupResolver(schema) });
 
   if (authenticated) {
-    // return <Redirect to="/dashboard" />;
+    navigate("/dashboard");
   }
 
   const onSubmit = (data) => {
@@ -45,14 +51,13 @@ function Signup({ authenticated }) {
       .post("/register", data)
       .then((response) => {
         toast.success("Sucesso ao criar usuário");
-        // history.push("/login");
+        navigate("/login");
       })
       .catch((err) => toast.error("Erro ao criar usuário, email duplicado"));
   };
 
   return (
     <Container>
-      <Background />
       <Content>
         <AnimationContainer>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -91,13 +96,15 @@ function Signup({ authenticated }) {
               error={errors.passwordConfirm?.message}
               type="password"
             />
-            <Button type="submit"> Enviar </Button>
-            <p>
-              {/* Já tem uma conta? Faça seu <Link to="/login">login</Link> */}
-            </p>
+            <Button type="submit"> Cadastrar </Button>
+
+            <span> Já tem uma conta? Faça seu <a href="/">login</a></span>
           </form>
         </AnimationContainer>
       </Content>
+      <figure>
+        <img src={RegisterImage} alt="register" />
+      </figure>
     </Container>
   );
 }

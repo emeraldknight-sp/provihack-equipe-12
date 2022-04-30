@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
-import Header from "../../components/Header/header";
+import Header from "../../components/Header";
 import Main from "../../components/Main";
 import { Options, StyledSection } from "./styles";
 

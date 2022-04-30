@@ -1,17 +1,16 @@
 import styled, { keyframes } from "styled-components";
-import SignUpImage from "../../assets/img/signup.svg";
 
 export const Container = styled.div`
   height: 100vh;
   display: flex;
   align-items: stretch;
-`;
+  overflow: hidden;
 
-export const Background = styled.div`
-  @media (min-width: 1100px) {
-    flex: 1;
-    // background: url(${SignUpImage}) no-repeat center, #0c0d0c;
-    background-size: contain;
+  figure {
+
+    img {
+      height: 100vh;
+    }
   }
 `;
 
@@ -43,12 +42,14 @@ export const AnimationContainer = styled.div`
   align-items: center;
   justify-content: center;
   animation: ${appearFromRight} 1s;
+
   form {
     margin: 80px 0;
     width: 340px;
     text-align: center;
 
     h1 {
+      font-size: var(--fontsize-h1);
       margin-bottom: 3rem;
     }
 

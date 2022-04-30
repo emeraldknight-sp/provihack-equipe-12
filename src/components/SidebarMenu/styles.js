@@ -51,8 +51,9 @@ export const OptionsMenuItem = styled.li`
   &:hover {
     border-bottom: 2px solid var(--gray-0);
   }
+
   svg {
-    fill: var(--gray-0);
+    color: var(--gray-0);
     width: 2rem;
     margin: 10px;
     height: auto;

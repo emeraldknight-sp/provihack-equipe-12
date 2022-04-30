@@ -1,5 +1,3 @@
-// import Button from "../../components/Button";
-// import { SolidSmallButton } from "../../components/Button/styles";
 import Header from "../../components/Header/header";
 import Footer from "../../components/Footer";
 import Main from "../../components/Main";

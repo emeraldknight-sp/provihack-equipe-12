@@ -1,0 +1,56 @@
+.MyVouchersContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.containerPoints {
+  margin-top: 15px;
+
+  border: 1px solid rgb(0, 0, 0);
+  height: 25px;
+  padding: 5px;
+}
+
+.verticalLine {
+  height: 200px;
+  border: 1px solid rgba(134, 146, 166, 1);
+}
+
+.rightContainer {
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightContainer img {
+  width: 30px;
+  height: 30px;
+}
+
+.voucher {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btnCopy {
+  all: unset;
+  border: 1px solid #8a7e7e;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 35px;
+  cursor: pointer;
+}
+
+.horizontalLine {
+  margin-top: 5px;
+  border-bottom: 1px solid rgba(134, 146, 166, 1);
+}

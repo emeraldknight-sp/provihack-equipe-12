@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import LoginImage from "../../assets/login.svg";
+import LoginImage from "../../assets/img/login.svg";
 
 export const Container = styled.div`
   height: 100vh;

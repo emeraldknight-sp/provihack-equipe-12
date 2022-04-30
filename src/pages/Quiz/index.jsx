@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Header from "../../components/Header/header";
+import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Lifes from '../../components/Lifes';
 import ErrorRadios from '../../components/FormRadioButton';

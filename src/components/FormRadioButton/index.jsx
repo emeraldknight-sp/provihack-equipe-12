@@ -7,7 +7,7 @@ import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
 
-export default function ErrorRadios({ alternativas }) {
+export default function ErrorRadios({ alternativas, setLifes, lifes, definirProximaPergunta, acertos, setAcertos }) {
     const [value, setValue] = React.useState('');
     const [error, setError] = React.useState(false);
     const [helperText, setHelperText] = React.useState('Choose wisely');
@@ -23,10 +23,13 @@ export default function ErrorRadios({ alternativas }) {
         const alternativaCerta = alternativas.find((alternativa) => alternativa.certa)
 
         if (value === alternativaCerta.alternativa) {
+            definirProximaPergunta()
             setHelperText('Você acertou!!');
+            setAcertos(acertos + 1)
             setError(false);
         } else if (value !== "") {
             setHelperText('Desculpe, você errou;');
+            setLifes(lifes - 1)
             setError(true);
         } else {
             setHelperText('Por favor escolha uma alternativa.');

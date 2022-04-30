@@ -42,8 +42,8 @@ export const questions = [
     {
         id: 6, pergunta: 'Qual o nome da energia obtida a partir da luz solar?', alternativas: [
             { id: 1, alternativa: 'Hidráulica', certa: false },
-            { id: 2, alternativa: 'Solar', certa: false },
-            { id: 3, alternativa: 'Eólica', certa: true },
+            { id: 2, alternativa: 'Solar', certa: true },
+            { id: 3, alternativa: 'Eólica', certa: false },
             { id: 4, alternativa: 'Biomassa', certa: false }
         ]
     },

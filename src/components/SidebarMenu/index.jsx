@@ -7,6 +7,7 @@ import { CgGames } from "react-icons/cg";
 import { VscActivateBreakpoints } from "react-icons/vsc";
 import { IoIosCard } from "react-icons/io";
 import { FiUsers, FiLogOut } from "react-icons/fi";
+import toast from "react-hot-toast";
 
 const SidebarMenu = ({ click, setClick }) => {
   const navigate = useNavigate();
@@ -15,6 +16,11 @@ const SidebarMenu = ({ click, setClick }) => {
     setClick(false);
     navigate(link);
   };
+
+  const Logout = (link) => {
+    toast.success("Volte sempre!");
+    navigate(link);
+  }
 
   return (
     <>
@@ -48,7 +54,7 @@ const SidebarMenu = ({ click, setClick }) => {
             <FiUsers /> Empresas parceiras
           </OptionsMenuItem>
 
-          <OptionsMenuItem onClick={() => handleClick("/")}>
+          <OptionsMenuItem onClick={() => Logout("/")}>
             <FiLogOut /> Sair
           </OptionsMenuItem>
         </MenuOptionsList>

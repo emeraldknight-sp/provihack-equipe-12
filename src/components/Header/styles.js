@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as HeaderImage } from "../../assets/img/header.svg";
+import HeaderImage from "../../assets/img/header.svg";
 
 
 export const StyledHeader = styled.header`
@@ -8,13 +8,22 @@ export const StyledHeader = styled.header`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 100vw;
-  height: 15vh;
-  z-index: 2;
-  background-image: url(${HeaderImage});
-  border-bottom: 2px solid var(--primary-color);
+  width: 100%;
+  height: 238px;
 
-  svg {
-    width: 100vw;
+  /* background-color: red; */
+  background-image: "url(${HeaderImage})";
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  div {
+    display: flex;
+    gap: 35px;
+    padding-left: 20px;
+    padding-top: 20px;
+
+    font: 400 18px "Roboto", sans-serif;
+    color: rgb(255, 255, 255);
   }
+
 `

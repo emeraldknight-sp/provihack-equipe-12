@@ -1,0 +1,25 @@
+.header {
+  margin-bottom: 50px;
+  margin-top: -5px;
+}
+
+.headerBackground {
+  display: flex;
+  height: 300px;
+  width: 100%;
+  padding: 0;
+
+  background-image: URL("../../assets/img/header.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headerInfos {
+  display: flex;
+  gap: 35px;
+  padding-left: 20px;
+  padding-top: 20px;
+
+  font: 400 18px "Roboto";
+  color: rgb(255, 255, 255);
+}

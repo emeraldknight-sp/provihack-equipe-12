@@ -48,7 +48,7 @@ export const StyledSection = styled.section`
     }
 
     &:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
     cursor: pointer;
   }
 `

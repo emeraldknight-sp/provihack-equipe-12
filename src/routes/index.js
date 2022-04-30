@@ -10,6 +10,9 @@ import SeloVerde from "../pages/SeloVerde";
 import Hangman from "../pages/Hangman";
 import Quiz from "../pages/Quiz";
 import Games from "../pages/Games";
+import EmpresasParceiras from "../pages/EmpresasParceiras";
+import MeusVouchers from "../pages/MeusVouchers";
+import Pontuacao from "../pages/Pontuacao";
 
 const MainRoutes = () => {
   return (
@@ -21,15 +24,21 @@ const MainRoutes = () => {
 
       <Route exact path="/profile" element={<UserProfile />} />
 
-      <Route path='/review-product' element={<ProductReview />} />
+      <Route exact path="/information" element={<SeloVerde />} />
+      
+      <Route path='/review' element={<ProductReview />} />
       
       <Route exact path="/games" element={<Games />} />
 
       <Route exact path="/games/hangman" element={<Hangman />} />
 
       <Route exact path="/games/quiz" element={<Quiz />} />
-        
-      <Route exact path="/green-pass" element={<SeloVerde />} />
+      
+      <Route exact path="/partners" element={<EmpresasParceiras />} />
+
+      <Route exact path="/vouchers" element={<MeusVouchers />} />
+      
+      <Route exact path="/score" element={<Pontuacao />} />
 
     </Routes>
   )

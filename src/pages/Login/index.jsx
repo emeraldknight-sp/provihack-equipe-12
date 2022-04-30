@@ -10,11 +10,20 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import api from "../../services/api";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 
 import LoginImage from "../../assets/img/sidebar-img.svg";
 
-const Login = ({ authenticated, setAuthenticated }) => {
+const Login = ({authenticated, setAuthenticated}) => {
+
+  const navigate = useNavigate();  
+
+  const handleClick = (link) => {
+    toast.success("Seja bem-vindo!")
+    navigate(link)
+  }
+
+  // SCHEMA YUP
   const schema = yup.object().shape({
     email: yup.string().email("Email inválido").required("Campo obrigatório!"),
     password: yup
@@ -23,33 +32,31 @@ const Login = ({ authenticated, setAuthenticated }) => {
       .required("Campo obrigatório"),
   });
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    // eslint-disable-next-line no-unused-vars
-    formState,
-  } = useForm({ resolver: yupResolver(schema) });
+  // REGISTER + YUP-RESOLVER
+  const { register, handleSubmit, formState: { errors } } = useForm({ 
+    resolver: yupResolver(schema) 
+  });
 
-  const navigate = useNavigate();
-
+  // FUNCTION ON -SUBMIT
   const onSubmit = (data) => {
-    api
-      .post("/login", data)
+    console.log("DATA ", data)
+
+    api.post("/login", data)
       .then((response) => {
         const { accessToken, user } = response.data;
+        console.log("RESPONSE ", response)
 
         localStorage.setItem("@Doit:token", JSON.stringify(accessToken));
         localStorage.setItem("@Doit:user", JSON.stringify(user));
 
         setAuthenticated(true);
-        navigate("/dashboard");
+        navigate("/profile");
       })
       .catch((err) => toast.error("Email ou senha inválidos"));
   };
 
   if (authenticated) {
-    navigate("/dashboard");
+    navigate("/profile");
   }
 
   return (
@@ -75,8 +82,8 @@ const Login = ({ authenticated, setAuthenticated }) => {
               error={errors.password?.message}
               type="password"
             />
-            <Button type="submit" >Entrar</Button>
-            <span> Já tem cadastro? <a href="/signup"> Clique aqui </a></span>
+            <Button type="submit" onClick={() => handleClick("/profile")}>Entrar</Button>
+            <span> Já tem cadastro? <a href="/signup"> Clique aqui </a> </span>
           </form>
         </AnimationContainer>
       </Content>

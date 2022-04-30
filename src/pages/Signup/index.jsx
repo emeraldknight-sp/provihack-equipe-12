@@ -10,7 +10,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import api from "../../services/api";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 
 import RegisterImage from "../../assets/img/sidebar-img.svg";
 
@@ -50,10 +50,10 @@ function Signup({ authenticated }) {
     api
       .post("/register", data)
       .then((response) => {
-        toast.success("Sucesso ao criar usuário");
+        toast.success("Conta criada");
         navigate("/login");
       })
-      .catch((err) => toast.error("Erro ao criar usuário, email duplicado"));
+      .catch((err) => toast.error("E-mail já está sendo utilizado!"));
   };
 
   return (

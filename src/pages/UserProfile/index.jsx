@@ -1,6 +1,4 @@
-// import Button from "../../components/Button";
-// import { SolidSmallButton } from "../../components/Button/styles";
-import Header from "../../components/Header/";
+import Header from "../../components/Header/header";
 import Footer from "../../components/Footer";
 import Main from "../../components/Main";
 import { StyledImage, StyledSection } from "./styles";
@@ -17,7 +15,7 @@ const UserProfile = () => {
             carregam o selo com apelo sustentável é estar consciente de que
             podemos fazer a nossa parte. Optando por produtos com estes selos,
             você acumulará pontos e poderá convertê-los em vouchers que poderão
-            ser utilizados em lojas parceiras.
+            ser utilizados em lojas parceiras. A
           </p>
           <figure>
             <StyledImage

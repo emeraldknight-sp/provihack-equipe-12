@@ -44,18 +44,18 @@ export const LargeButton = styled(StyledButton)
 
 export const SolidSmallButton = styled(StyledButton)`
   background-color: var(--primary-color);
-  color: white;
+  color: var(--gray-0);
   width: 50px;
   
 `
 export const SolidMediumButton = styled(StyledButton)` 
   background-color: var(--primary-color);
-  color: white;
+  color: var(--gray-0);
   width: 100px;
 `
 
 export const SolidLargeButton = styled(StyledButton)`
   background-color: var(--primary-color);
-  color: white;
+  color: var(--gray-0);
   width: 150px;
 `

@@ -33,7 +33,7 @@ export const Options = styled.ul`
 
     &:hover {
       background-color: rgb(34, 177, 76);
-      color: white;
+      color: var(--gray-0);
     }
   }
 `

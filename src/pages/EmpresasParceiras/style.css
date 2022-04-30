@@ -1,0 +1,48 @@
+.empresasParceirasContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.containerContent {
+  width: 270px;
+  height: 330px;
+  background-color: rgb(223, 211, 211);
+
+  padding: 25px;
+  margin: 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardCompanyName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+}
+
+.cardCompanyName img {
+  width: 150px;
+  height: 150px;
+}
+
+.cardCompanyName strong {
+  font-size: 20px;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.cardCompanyName h4 {
+  font-size: 19px;
+  font-weight: normal;
+}
+
+.cardCompanyName p {
+  font-size: 15px;
+  font-weight: normal;
+}

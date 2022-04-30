@@ -1,15 +1,9 @@
 export const palavras = [
-    { id: 1, palavra: 'primeira', significa: 'primeira palavra' },
-    { id: 2, palavra: 'segunda', significa: '2 palavra' },
-    { id: 3, palavra: 'terceira', significa: '3 palavra' },
-    { id: 4, palavra: 'quarta', significa: '4 palavra' },
-    { id: 5, palavra: 'quinta', significa: '5 palavra' },
-    { id: 6, palavra: 'sexta', significa: '6 palavra' },
-    { id: 7, palavra: 'setima', significa: '7 palavra' },
-    { id: 8, palavra: 'oitava', significa: '8 palavra' },
-    { id: 9, palavra: 'nona', significa: '9 palavra' },
-    { id: 10, palavra: 'decima', significa: '10 palavra' },
-    { id: 11, palavra: 'decimaprimeira', significa: '11 palavra' },
-    { id: 12, palavra: 'decimasegunda', significa: '12 palavra' },
-    { id: 13, palavra: 'decimaterceira', significa: '13 palavra' },
+    { id: 1, palavra: 'papel', significa: 'Tipo de material que deve ser descartado no lixo de coloração azul.' },
+    { id: 2, palavra: 'sacola', significa: 'Produto de plático que deve ser descartado no lixo de coloração vermelha.' },
+    { id: 3, palavra: 'verde', significa: 'Cor que deve ser descartado produtos de vidro.' },
+    { id: 4, palavra: 'metal', significa: 'Tipo de material que deve ser descartado no lixo de coloração amarela.' },
+    { id: 5, palavra: 'eolica', significa: 'Energia obtida da força do vento.' },
+    { id: 6, palavra: 'solar', significa: 'Energia obtida pela luz.' },
+    { id: 7, palavra: 'hidrogenio', significa: 'Elemento que combinado com o oxigênio produz água e libera energia para ser consumida.' }
 ]

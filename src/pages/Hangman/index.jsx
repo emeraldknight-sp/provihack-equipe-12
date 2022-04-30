@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Title, GameDiv, AttemptsDiv, HangmanDiv, Letter, WordDiv, LeftDiv, RightDiv, InputDiv } from "./styles";
-import { palavras } from './words/palavras';
+import Header from "../../components/Header/header";
+import Footer from "../../components/Footer";
 import Lifes from '../../components/Lifes';
+import { AttemptsDiv, GameDiv, HangmanDiv, InputDiv, LeftDiv, Letter, RightDiv, Title, WordDiv } from "./styles";
+import { palavras } from './words/palavras';
 
 const Hangman = () => {
   const [letras, setLetras] = useState("");
@@ -44,7 +46,7 @@ const Hangman = () => {
       return
     }
     if (letrasTentadas.some((iten) => iten === tentativa.toLowerCase())) {
-      alert('já foi')
+      alert('Essa letra já foi utilizada!')
       setTentativa("")
       return
     }
@@ -84,14 +86,25 @@ const Hangman = () => {
 
   return (
     <>
+      <Header />
       <HangmanDiv>
         <Title>
-          Jogo da Forca
+          <h1>
+            Jogo da Forca
+          </h1>
+          <p>
+            <b>
+              Instruções:
+            </b>
+            Clique no botão iniciar para começar o jogo e utilize o espaço para digitar a letra desejada e aperte o botão para confirmar sua escolha. Aproveite a dica ao lado para aumentar seu conhecimento sobre assuntos ligados a preservação ambiental. Tome cuidado para não perder todas as suas vidas. Não é utilizado acentos ou "ç" e não tem diferença entra letras maiúsculas ou minúsculas.
+          </p>
+
         </Title>
         <GameDiv>
-
           <LeftDiv>
-            <h1>{`Dica: ${letras.significado}`}</h1>
+            {letras !== "" &&
+              <h1>{`Dica: ${letras.significado}`}</h1>
+            }
             <Lifes lifes={lifes} />
             <AttemptsDiv>
               <p>Letras tentadas: </p>
@@ -127,6 +140,7 @@ const Hangman = () => {
           </RightDiv>
         </GameDiv>
       </HangmanDiv>
+      <Footer />
     </>
   );
 };

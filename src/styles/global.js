@@ -66,12 +66,12 @@ select {
   --gray-4: ;
   --gray-3: ;
   --gray-2: ;
-  --gray-1: ;
-  --gray-0: ;
+  --gray-1: #d5d5d5;
+  --gray-0: #ffffff;
 
-  --button: ;
-  --button--negative: ;
-  --border: ;
+  --button: #22B14C;
+  --button--negative: #22B14C;
+  --border: #22B14C;
 
   --fontfamily-body: "Lato", sans-serif;
   --fontfamily-decorative: "Playfair Display", serif;

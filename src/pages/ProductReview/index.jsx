@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
-import Header from "../../components/Header/header";
+import Header from "../../components/Header";
 import Main from "../../components/Main";
 import { Options, StyledSection } from "./styles";
 
@@ -22,7 +22,7 @@ const ProductReview = () => {
           <p>
             Conhecer e escolher consumirs amigos do meio ambiente, que
             carregam o selo com apelo sustentável é estar consciente de que
-            podemos fazer a nossa parte. 
+            podemos fazer a nossa parte.
           </p>
           <p>
             Optando pors com estes selos,

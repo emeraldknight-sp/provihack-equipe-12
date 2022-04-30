@@ -3,15 +3,14 @@ import Footer from "../../components/Footer";
 import Main from "../../components/Main";
 import Button from "../../components/Button";
 import { StyledImage, StyledSection } from "./styles";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const UserProfile = () => {
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleClick = (link) => {
-    console.log(link)
-    history.push(link)
+    navigate(link);
   }
 
   return (

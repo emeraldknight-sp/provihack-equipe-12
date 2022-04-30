@@ -1,4 +1,4 @@
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header/header";
 import Main from "../../components/Main";
@@ -6,7 +6,7 @@ import { Options, StyledSection } from "./styles";
 
 const ProductReview = () => {
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -14,9 +14,9 @@ const ProductReview = () => {
       <Main>
         <Options>
           <h2>Produto Amigo</h2>
-          <li onClick={() => history.push("/history")}>Histórico de Compras</li>
-          <li onClick={() => history.push("/asses")}>Avaliar</li>
-          <li onClick={() => history.push("/search")}>Buscar</li>
+          <li onClick={() => navigate("/navigate")}>Histórico de Compras</li>
+          <li onClick={() => navigate("/asses")}>Avaliar</li>
+          <li onClick={() => navigate("/search")}>Buscar</li>
         </Options>
         <StyledSection>
           <p>

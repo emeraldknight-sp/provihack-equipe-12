@@ -1,31 +1,16 @@
 import { Route } from "react-router-dom";
-import { Switch } from "react-router-dom";
+import { Routes } from "react-router-dom";
 import ProductReview from "../pages/ProductReview";
-import Teste from "../pages/teste";
 import UserProfile from "../pages/UserProfile";
 
-const Routes = () => {
+const MainRoutes = () => {
   return(
-    <Switch>
-      <Route exact path='/'>
+    <Routes>
+
+      <Route path='/review-product' element={<ProductReview />} />
         
-      </Route>
-      <Route path='/login'>
-
-      </Route>
-      <Route path='/profile'>
-        <UserProfile />
-      </Route>
-      <Route path='/review-product'>
-        <ProductReview />
-      </Route>
-      
-      <Route path='/teste'>
-        <Teste />
-      </Route>
-
-    </Switch>
+    </Routes>
   )
 }
 
-export default Routes;
+export default MainRoutes;

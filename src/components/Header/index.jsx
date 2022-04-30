@@ -1,17 +1,16 @@
-import Container from "../Container";
-import { StyledHeader } from "./styles";
+import "./style.css";
+import Logo from "../../assets/img/+Leaf.svg";
+import MenuIcon from "../../assets/img/burguerMenu.svg";
 
-// import { ReactComponent as HeaderImage } from "../../assets/img/header.svg";
-
-const Header = ({ children }) => {
+function Header() {
   return (
-    <StyledHeader>
-      {/* <HeaderImage /> */}
-        <Container>
-          { children }
-        </Container>
-    </StyledHeader>
-  )
+    <header className="header">
+      <div className="headerBackground">
+        <img className="headerLogo" src={Logo} alt="Logo" />
+        <img className="menuBurguer" src={MenuIcon} alt="Menu" />
+      </div>
+    </header>
+  );
 }
 
 export default Header;

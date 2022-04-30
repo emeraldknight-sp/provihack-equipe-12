@@ -1,22 +1,21 @@
-import Button from "../../components/Button";
-import { SolidSmallButton } from "../../components/Button/styles";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import Main from "../../components/Main";
-import { StyledImage, StyledMenu, StyledSection } from "./styles";
+import Button from "../../components/Button";
+import { StyledImage, StyledSection } from "./styles";
+import { useNavigate } from "react-router-dom";
 
 const UserProfile = () => {
+
+  const navigate = useNavigate();
+
+  const handleClick = (link) => {
+    navigate(link);
+  }
+
   return (
     <>
-      <Header>
-        <StyledMenu>
-          <Button>Início</Button>
-          <Button>O que é selo verde?</Button>
-          <Button>Pontuação</Button>
-          <Button>Meus vouchers</Button>
-          <Button>Empresas parceiras</Button>
-        </StyledMenu>
-        <SolidSmallButton>Sair</SolidSmallButton>
-      </Header>
+      <Header />
       <Main>
         <StyledSection>
           <h3>Produto Amigo</h3>
@@ -33,11 +32,12 @@ const UserProfile = () => {
               alt="imagem-1"
             ></StyledImage>
           </figure>
+          <Button onClick={() => handleClick("/review-product")}> Saiba mais </Button>
         </StyledSection>
         <StyledSection>
           <h3>Jogos</h3>
           <p>
-            Jogos interativos, voltadas para asuntos relacionados ao meio
+            Jogos interativos, voltadas para assuntos relacionados ao meio
             ambiente equilibrado, onde crianças de todas as idades poderão se
             divertir e aprender ao mesmo tempo.
           </p>
@@ -47,8 +47,10 @@ const UserProfile = () => {
               alt="imagem-2"
             ></StyledImage>
           </figure>
+          <Button onClick={() => handleClick("/games")}> Jogar </Button>
         </StyledSection>
       </Main>
+      <Footer />
     </>
   );
 };

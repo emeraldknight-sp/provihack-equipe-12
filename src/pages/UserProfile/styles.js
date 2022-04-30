@@ -22,10 +22,13 @@ export const StyledSection = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 300px 0 1;
+    flex: 400px 0 1;
     gap: 20px;
-    transition: transform 0.2s;
-    height: 420px;
+    transition: border 0.2s;
+    height: 600px;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 15px;
 
     h3 {
       width: 100%;
@@ -48,7 +51,7 @@ export const StyledSection = styled.section`
     }
 
     &:hover {
-    transform: scale(1.1);
+    border: 2px solid var(--primary-color);
     cursor: pointer;
   }
 `

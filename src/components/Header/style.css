@@ -1,0 +1,19 @@
+.header {
+  padding-top: 5px;
+  margin-bottom: 50px;
+  margin-top: -5px;
+}
+
+.headerBackground {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+
+  background-image: URL("../../assets/img/header.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

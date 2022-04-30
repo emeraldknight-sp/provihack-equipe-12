@@ -34,7 +34,6 @@ const UserProfile = () => {
             ></StyledImage>
           </figure>
           <Button onClick={() => handleClick("/review-product")}> Saiba mais </Button>
-          {/* <a href="/review-product"> Saiba mais </a> */}
         </StyledSection>
         <StyledSection>
           <h3>Jogos</h3>
@@ -49,8 +48,7 @@ const UserProfile = () => {
               alt="imagem-2"
             ></StyledImage>
           </figure>
-          {/* <Button onClick={() => handleClick("/games")}> Jogar </Button> */}
-          <a href="/games"> Jogar </a>
+          <Button onClick={() => handleClick("/games")}> Jogar </Button>
         </StyledSection>
       </Main>
       <Footer />

@@ -1,10 +1,80 @@
 .footer {
-  background-image: url("../../assets/img/footer.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  margin-top: 25px;
+  background-color: #22b14c;
+  width: 100%;
+  height: 100px;
+}
 
-  max-width: 100vw;
-  height: 238px;
+.containerFooter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  margin-top: 50px;
+.leftFooter {
+  padding: 15px;
+}
+
+.SocialMedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.SocialMedia span {
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px;
+  margin-left: 35px;
+}
+
+.socialMediaIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.socialMediaIcons img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.rightFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px;
+
+  color: #fff;
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+.contact {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.rightFooter a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.legalPolicts {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
 }

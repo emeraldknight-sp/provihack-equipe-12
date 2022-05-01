@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Lifes from '../../components/Lifes';
-import { AttemptsDiv, GameDiv, HangmanDiv, InputDiv, LeftDiv, Letter, RightDiv, Title, WordDiv } from "./styles";
+import { PageDiv, AttemptsDiv, GameDiv, HangmanDiv, InputDiv, LeftDiv, Letter, RightDiv, Title, WordDiv } from "./styles";
 import { palavras } from './words/palavras';
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
@@ -90,7 +90,7 @@ const Hangman = () => {
   }, [lifes])
 
   return (
-    <>
+    <PageDiv>
       <Header />
       <HangmanDiv>
         <Title>
@@ -159,7 +159,7 @@ const Hangman = () => {
         </GameDiv>
       </HangmanDiv>
       <Footer />
-    </>
+    </PageDiv>
   );
 };
 

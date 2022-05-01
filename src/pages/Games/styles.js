@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
+export const PageDiv = styled.div`
+  min-height: 100vh;
+`
+
 export const Content = styled.div`
+  min-height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -17,6 +22,7 @@ export const BlockContent = styled.div`
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-top:32px;
 `
 
 export const StyledImage = styled.img`
@@ -30,8 +36,6 @@ export const StyledGames = styled.section`
     width:50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
     transition: transform 0.2s;
     height: 420px;
@@ -57,8 +61,6 @@ export const StyledInfos = styled.section`
     width:50%;  
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 50px;
     transition: transform 0.2s;
     height: 420px;

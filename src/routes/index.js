@@ -6,6 +6,7 @@ import Signup from "../pages/Signup";
 import UserProfile from "../pages/UserProfile";
 import ProductReview from "../pages/ProductReview";
 import SeloVerde from "../pages/SeloVerde";
+import List from "../pages/List";
 
 import Hangman from "../pages/Hangman";
 import Quiz from "../pages/Quiz";
@@ -14,7 +15,7 @@ import Games from "../pages/Games";
 const MainRoutes = () => {
   return (
     <Routes>
-    
+
       <Route exact path="/" element={<Login />} />
 
       <Route exact path="/signup" element={<Signup />} />
@@ -22,14 +23,15 @@ const MainRoutes = () => {
       <Route exact path="/profile" element={<UserProfile />} />
 
       <Route path='/review-product' element={<ProductReview />} />
-      
+
       <Route exact path="/games" element={<Games />} />
 
       <Route exact path="/games/hangman" element={<Hangman />} />
 
       <Route exact path="/games/quiz" element={<Quiz />} />
-        
+
       <Route exact path="/green-pass" element={<SeloVerde />} />
+      <Route exact path="/List" element={<List />} />
 
     </Routes>
   )

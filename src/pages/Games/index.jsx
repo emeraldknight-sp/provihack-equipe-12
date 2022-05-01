@@ -1,8 +1,6 @@
-// import Button from "../../components/Button";
-// import { SolidSmallButton } from "../../components/Button/styles";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { StyledImage, StyledGames, StyledInfos, Content, BlockContent } from "./styles";
+import { StyledImage, StyledGames, StyledInfos, Content, BlockContent, PageDiv } from "./styles";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 
@@ -14,7 +12,7 @@ const Games = () => {
     navigate(link)
   }
   return (
-    <>
+    <PageDiv>
       <Header />
       <Content>
         <h1>Jogos temáticos</h1>
@@ -41,7 +39,7 @@ const Games = () => {
         </BlockContent>
       </Content>
       <Footer />
-    </>
+    </PageDiv>
   );
 };
 

@@ -9,53 +9,88 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 
 const columns = [
-    { id: 'name', label: 'Name', minWidth: 170 },
-    { id: 'code', label: 'ISO\u00a0Code', minWidth: 100 },
-    {
-        id: 'population',
-        label: 'Population',
-        minWidth: 170,
-        align: 'right',
-        format: (value) => value.toLocaleString('en-US'),
-    },
-    {
-        id: 'size',
-        label: 'Size\u00a0(km\u00b2)',
-        minWidth: 170,
-        align: 'right',
-        format: (value) => value.toLocaleString('en-US'),
-    },
-    {
-        id: 'density',
-        label: 'Density',
-        minWidth: 170,
-        align: 'right',
-        format: (value) => value.toFixed(2),
-    },
+    { id: 'position', label: 'Posição', minWidth: 100 },
+    { id: 'name', label: 'Nome', minWidth: 170 }
 ];
 
-function createData(name, code, population, size) {
-    const density = population / size;
-    return { name, code, population, size, density };
+function createData(name, position) {
+    return { name, position };
 }
 
 const rows = [
     createData('EDEP Energias do Brasil', 1),
-
-    createData('China', 'CN', 1403500365, 9596961),
-    createData('Italy', 'IT', 60483973, 301340),
-    createData('United States', 'US', 327167434, 9833520),
-    createData('Canada', 'CA', 37602103, 9984670),
-    createData('Australia', 'AU', 25475400, 7692024),
-    createData('Germany', 'DE', 83019200, 357578),
-    createData('Ireland', 'IE', 4857000, 70273),
-    createData('Mexico', 'MX', 126577691, 1972550),
-    createData('Japan', 'JP', 126317000, 377973),
-    createData('France', 'FR', 67022000, 640679),
-    createData('United Kingdom', 'GB', 67545757, 242495),
-    createData('Russia', 'RU', 146793744, 17098246),
-    createData('Nigeria', 'NG', 200962417, 923768),
-    createData('Brazil', 'BR', 210147125, 8515767),
+    createData('Lojas Renner', 2),
+    createData('Telefônica Brasil', 3),
+    createData('CPFL Energia', 4),
+    createData('Natura', 5),
+    createData('Klabin', 6),
+    createData('Itaú Unibanco', 7),
+    createData('Ambipar', 8),
+    createData('Suzano', 9),
+    createData('Engie Brasil', 10),
+    createData('Copel', 11),
+    createData('Bradesco', 12),
+    createData('TIM', 13),
+    createData('Braskem', 14),
+    createData('Ecorodovias', 15),
+    createData('BTG Pactual', 16),
+    createData('Itaúsa', 17),
+    createData('AES Brasil', 18),
+    createData('CCR', 19),
+    createData('Cosan', 20),
+    createData('Duratex', 21),
+    createData('Fleury', 22),
+    createData('CBD', 23),
+    createData('Neoenergia', 24),
+    createData('Cemig', 25),
+    createData('Americanas', 26),
+    createData('BRF', 27),
+    createData('Vibra', 28),
+    createData('Banco do Brasil', 29),
+    createData('Rumo', 30),
+    createData('Movida', 31),
+    createData('Santander', 32),
+    createData('M. Dias Branco', 33),
+    createData('Marfrig', 34),
+    createData('Raia Drogasil', 35),
+    createData('Cielo', 36),
+    createData('JBS', 37),
+    createData('Sul América', 38),
+    createData('Eletrobrás', 39),
+    createData('Arezzo', 40),
+    createData('CSN', 41),
+    createData('Light', 42),
+    createData('Simpar', 43),
+    createData('Minerva', 44),
+    createData('MRV', 45),
+    createData('WEG', 46),
+    createData('Grendene', 47),
+    createData('Via', 48),
+    createData('Magazine Luiza', 49),
+    createData('Usiminas', 50),
+    createData('CSN Mineração', 51),
+    createData('Azul', 52),
+    createData('Ambev', 53),
+    createData('Iochpe Maxion', 54),
+    createData('Irani', 55),
+    createData('Locamerica', 56),
+    createData('CTEEP', 57),
+    createData('Odontoprev', 58),
+    createData('Guararapes', 59),
+    createData('Vamos', 60),
+    createData('Aliansce Sonae', 61),
+    createData('Gafisa', 62),
+    createData('Cesp', 63),
+    createData('Hypera', 64),
+    createData('Anima', 65),
+    createData('Notre Dame Intermédica', 66),
+    createData('Aeris', 67),
+    createData('Locaweb', 68),
+    createData('Syn Prop e Tech', 69),
+    createData('Grupo Soma', 70),
+    createData('Cury', 71),
+    createData('Positivo', 72),
+    createData('Lojas Quero-Quero', 73)
 ];
 
 export default function StickyHeadTable() {
@@ -111,7 +146,7 @@ export default function StickyHeadTable() {
                 </Table>
             </TableContainer>
             <TablePagination
-                rowsPerPageOptions={[10, 25, 100]}
+                rowsPerPageOptions={[10, 20, 50, 100]}
                 component="div"
                 count={rows.length}
                 rowsPerPage={rowsPerPage}

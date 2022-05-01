@@ -34,7 +34,7 @@ const SidebarMenu = ({ click, setClick }) => {
             <BsQuestionCircle /> O que é o Selo Verde?
           </OptionsMenuItem>
 
-          <OptionsMenuItem onClick={() => handleClick("/review")}>
+          <OptionsMenuItem onClick={() => handleClick("/review-product")}>
             <MdOutlineVerified /> Avaliar
           </OptionsMenuItem>
 

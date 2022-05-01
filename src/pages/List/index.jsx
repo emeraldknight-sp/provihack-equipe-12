@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 const List = () => {
   const navigate = useNavigate()
 
+  // eslint-disable-next-line no-unused-vars
   function navegacao(link) {
     navigate(link)
   }

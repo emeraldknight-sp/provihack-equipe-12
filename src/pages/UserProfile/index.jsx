@@ -32,7 +32,7 @@ const UserProfile = () => {
               alt="imagem-1"
             ></StyledImage>
           </figure>
-          <Button onClick={() => handleClick("/review")}> Saiba mais </Button>
+          <Button onClick={() => handleClick("/friend-product")}> Saiba mais </Button>
         </StyledSection>
         <StyledSection>
           <h3>Jogos</h3>

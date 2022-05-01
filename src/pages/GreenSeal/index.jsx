@@ -7,7 +7,7 @@ import ProcelIcon from "../../assets/img/procelInfoIcon.svg";
 import CerflorIcon from "../../assets/img/cerflorIcon.svg";
 import RainForrestIcon from "../../assets/img/rainForrestAlliance.svg";
 
-function SeloVerde() {
+function GreenSeal() {
   return (
     <div className="container">
       <Header />
@@ -32,4 +32,4 @@ function SeloVerde() {
   );
 }
 
-export default SeloVerde;
+export default GreenSeal;

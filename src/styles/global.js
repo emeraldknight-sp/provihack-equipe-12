@@ -63,11 +63,14 @@ select {
   --primary-color: #22B14C;
   --secondary-color: ;
 
-  --gray-4: ;
-  --gray-3: ;
-  --gray-2: ;
+  --gray-4: #696969;
+  --gray-3: #e5e4e2;
+  --gray-2: #dcdcdc;
   --gray-1: #d5d5d5;
   --gray-0: #ffffff;
+
+  --black: #13191B;
+  --white: #F5F5F5; 
 
   --button: #22B14C;
   --button--negative: #22B14C;

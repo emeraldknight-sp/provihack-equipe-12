@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import "./style.css";
 import VoucherIcon from "../../assets/img/voucherIcon.svg";
 
-function MeusVouchers() {
+function MyVouchers() {
   return (
     <div className="MyVouchers">
       <Header />
@@ -32,4 +32,4 @@ function MeusVouchers() {
   );
 }
 
-export default MeusVouchers;
+export default MyVouchers;

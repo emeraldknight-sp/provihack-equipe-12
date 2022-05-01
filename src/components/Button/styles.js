@@ -28,34 +28,47 @@ export const StyledButton = styled.button `
   }
 `
 
-export const SmallButton = styled(StyledButton)
+export const SmallButton = styled(StyledButton)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 50px;
+  color: var(--primary-color);
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  padding: 0;
+  margin: 0 25px;
+
+  &:hover {
+    border: 2px solid var(--primary-color);
+    filter: brightness(0.8);
+  }
 `
 
-`
-export const MediumButton = styled(StyledButton)
-`
+export const MediumButton = styled(SmallButton)`
+  width: 100px;
 
 `
 
-export const LargeButton = styled(StyledButton)
-`
+export const LargeButton = styled(MediumButton)`
+  width: 150px;
 
 `
 
 export const SolidSmallButton = styled(StyledButton)`
   background-color: var(--primary-color);
-  color: white;
+  color: var(--gray-0);
   width: 50px;
   
 `
-export const SolidMediumButton = styled(StyledButton)` 
-  background-color: var(--primary-color);
-  color: white;
+export const SolidMediumButton = styled(SolidSmallButton)` 
   width: 100px;
+  
 `
 
-export const SolidLargeButton = styled(StyledButton)`
-  background-color: var(--primary-color);
-  color: white;
+export const SolidLargeButton = styled(SolidMediumButton)`
   width: 150px;
+
 `

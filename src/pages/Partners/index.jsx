@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import CompanyLogo from "../../assets/img/companyPlaceHolder.jpg";
 
-function EmpresasParceiras() {
+function Partners() {
   return (
     <div className="empresasParceiras">
       <Header />
@@ -58,4 +58,4 @@ function EmpresasParceiras() {
   );
 }
 
-export default EmpresasParceiras;
+export default Partners;

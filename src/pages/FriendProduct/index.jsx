@@ -15,7 +15,7 @@ const ProductReview = () => {
         <Options>
           <h2>Produto Amigo</h2>
           <li onClick={() => navigate("/navigate")}>Histórico de Compras</li>
-          <li onClick={() => navigate("/asses")}>Avaliar</li>
+          <li onClick={() => navigate("/review-product")}>Avaliar</li>
           <li onClick={() => navigate("/search")}>Buscar</li>
         </Options>
         <StyledSection>

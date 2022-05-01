@@ -19,7 +19,7 @@ box-shadow: 20px 0px 35px 0px rgba(0,0,0,0.49);
   justify-content: flex-start;
   align-items: center;
   
-  position: absolute;
+  position: fixed;
   top: 0;
   left: ${(props) => (props.click ? "0px" : "-130px")};
   
@@ -44,7 +44,7 @@ export const OptionsMenuItem = styled.li`
   color: var(--gray-0);
   text-decoration: none;
   width: 100%;
-  padding: 1rem;
+  padding: .8rem;
   border-bottom: 2px solid transparent;
   cursor: pointer;
 

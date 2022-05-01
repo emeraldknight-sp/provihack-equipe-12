@@ -13,6 +13,7 @@ import api from "../../services/api";
 import toast from "react-hot-toast";
 
 import LoginImage from "../../assets/img/sidebar-img.svg";
+import Logo from "../../components/Logo";
 
 const Login = ({authenticated, setAuthenticated}) => {
 
@@ -90,6 +91,7 @@ const Login = ({authenticated, setAuthenticated}) => {
       <figure>
         <img src={LoginImage} alt="login" />
       </figure>
+      <Logo />
     </Container>
   );
 }

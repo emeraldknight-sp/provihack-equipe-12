@@ -5,7 +5,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { BsQuestionCircle } from "react-icons/bs";
 import { CgGames } from "react-icons/cg";
 import { VscActivateBreakpoints } from "react-icons/vsc";
-import { IoIosCard } from "react-icons/io";
+import { IoIosCard, IoIosPodium } from "react-icons/io";
 import { FiUsers, FiLogOut } from "react-icons/fi";
 import toast from "react-hot-toast";
 
@@ -52,6 +52,10 @@ const SidebarMenu = ({ click, setClick }) => {
 
           <OptionsMenuItem onClick={() => handleClick("/partners")}>
             <FiUsers /> Empresas parceiras
+          </OptionsMenuItem>
+
+          <OptionsMenuItem onClick={() => handleClick("/ranking-esg")}>
+            <IoIosPodium /> Ranking ESG
           </OptionsMenuItem>
 
           <OptionsMenuItem onClick={() => Logout("/")}>

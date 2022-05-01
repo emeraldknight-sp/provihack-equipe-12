@@ -17,7 +17,7 @@ const List = () => {
       <Header />
       <Content>
         <h1>Ranking ESG</h1>
-        <span>Abaixo se encontra as companhias abertas com as melhores notas de ESG(sigla em inglês para Ambiental,Social e Governança) segundo a B3.</span>
+        <span>Abaixo se encontra as companhias abertas com as melhores notas de ESG (sigla em inglês para Ambiental, Social e Governança) segundo a B3.</span>
         <ListContent>
           <StickyHeadTable />
         </ListContent>

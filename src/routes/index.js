@@ -44,7 +44,7 @@ const MainRoutes = () => {
 
       <Route exact path="/score" element={<Score />} />
 
-      <Route exact path="/list" element={<List />} />
+      <Route exact path="/ranking-esg" element={<List />} />
 
     </Routes>
   )

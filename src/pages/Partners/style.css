@@ -1,15 +1,19 @@
 .empresasParceirasContainer {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
+  height: 80vh;
 }
 
 .containerContent {
-  width: 270px;
+  width: 235px;
   height: 330px;
-  background-color: rgb(223, 211, 211);
 
-  padding: 25px;
-  margin: 25px;
+  text-align: center;
+  box-sizing: content-box;
+  padding: 10px;
+  margin: 10px;
 
   display: flex;
   flex-direction: column;

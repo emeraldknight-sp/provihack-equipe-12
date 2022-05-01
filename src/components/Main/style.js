@@ -3,9 +3,9 @@ import styled from "styled-components"
 export const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
-  height: 70%;
+  height: 80vh;
 
   h1 {
     font-size: var(--fontsize-h1);

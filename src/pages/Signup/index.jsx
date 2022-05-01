@@ -13,6 +13,7 @@ import api from "../../services/api";
 import toast from "react-hot-toast";
 
 import RegisterImage from "../../assets/img/sidebar-img.svg";
+import Logo from "../../components/Logo";
 
 function Signup({ authenticated }) {
   const schema = yup.object().shape({
@@ -96,7 +97,7 @@ function Signup({ authenticated }) {
               error={errors.passwordConfirm?.message}
               type="password"
             />
-            <Button type="submit"> Cadastrar </Button>
+            <Button type="submit" > Cadastrar </Button>
 
             <span> Já tem uma conta? Faça seu <a href="/">login</a></span>
           </form>
@@ -105,6 +106,7 @@ function Signup({ authenticated }) {
       <figure>
         <img src={RegisterImage} alt="register" />
       </figure>
+      <Logo />
     </Container>
   );
 }

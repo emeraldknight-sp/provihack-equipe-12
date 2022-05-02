@@ -1,0 +1,28 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.content p {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+
+  width: 750px;
+}
+
+.seals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.content img {
+  margin-top: 25px;
+  width: 150px;
+  height: 150px;
+}
